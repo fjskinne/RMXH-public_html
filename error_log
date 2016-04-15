@@ -1,0 +1,6 @@
+[15-Feb-2016 23:50:24 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/fjskinne/public_html/php/header.php on line 3
+[15-Feb-2016 23:50:35 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/fjskinne/public_html/php/header.php on line 3
+[15-Feb-2016 23:50:42 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/fjskinne/public_html/php/header.php on line 3
+[04-Apr-2016 15:55:26 UTC] PHP Fatal error:  Class 'NivoSlider' not found in /home/fjskinne/public_html/index.php on line 7
+[04-Apr-2016 20:03:10 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/fjskinne/public_html/index.php on line 191
+[04-Apr-2016 20:05:05 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/fjskinne/public_html/index.php on line 191

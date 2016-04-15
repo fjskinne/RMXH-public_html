@@ -1,0 +1,2 @@
+AuthName "rmxh"
+AuthUserFile "/home/fjskinne/.htpasswds/public_html/passwd"

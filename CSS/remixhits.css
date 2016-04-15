@@ -1,0 +1,697 @@
+@charset "utf-8";
+html {
+  height: 100%;
+  box-sizing:border-box;
+}
+body {
+	position: relative;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	color: black;
+	height:100%;
+/*	background-image: url(cloud%202-1000w.jpg);
+	background-repeat: space;*/
+	font-size: 12px;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+	list-style-type:none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	text-align: center;
+	font-family: "Comic Sans MS", cursive;
+	font-size: small;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+a:visited {
+	color: #336666;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	min-height:100%;
+	width: auto  ;
+	background: black; 
+	background-image: none;
+	height: 100%;
+/* 	padding-bottom:100px;   Height of the footer */
+}
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: darkgrey;
+/*	position:relative;
+	background-image: url("/images/rmxhlogo.png");*/
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 150px;
+	width: 100%; 
+	border: medium solid green;
+	text-align: center;
+	color:lightblue;
+	font-size: x-large;
+}
+.header img {
+/*    border: 1px solid #ddd;
+    border-radius: 4px;
+	background-color: LightSteelBlue;
+	height: 75;
+	*/
+    position:absolute;
+	left:20px;
+	top:10px; 
+	float:left;
+    clear:left;
+	padding: 5px 5px 10px 15px;
+    margin: 0px 10px 10px 10px;
+	width: 25%;
+}
+
+
+.ht_position {
+	text-align:center;
+    align: center;
+margin-top:auto;
+margin-bottom:auto;
+    top: 80px;
+}
+
+.center_it {
+	text-align:center;
+	margin: auto auto;
+}
+
+.content {
+/*	position:absolute;
+
+	top:150px;
+
+	float:left;
+ 	padding: 5px 5px 100px 25px;
+ */	
+ 	height: auto;
+	min-height:100%;
+/*    	padding-bottom:100px; Height of the footer */
+	margin:10,10,10,10;
+	background-color: darkgrey;
+	background-repeat: no-repeat;
+	background-position: left center;
+	width:100%;
+	text-align: left;
+	color:green;
+	font-size: large;
+}
+
+.uppercontent {
+/*	
+	position:absolute;
+	top:150px;
+*/	
+	float:left;
+	height: auto;
+	width:100%;
+	margin:10,10,10,10;
+	background-color: DarkGreen;
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-align: left;
+	color:lightgreen;
+	font-size: medium;
+}
+
+.lowercontent {
+/*	position:absolute;
+	top:450px;
+	float:left;
+	clear:left;
+	*/
+	height: auto;
+	width:100%;
+/*  	padding-bottom:80px;  Height of the footer
+	margin:10,10,10,10; */
+	background-color: DarkSeaGreen;
+	background-repeat: no-repeat;
+	background-position: left center;
+	float: left;
+	color:green;
+	font-size: large;
+}
+
+.footer {
+	position:relative;
+	bottom:0;
+    width:100%;
+/*    padding: 10px,10px,10px,10px ;
+ */
+	height:100px;
+	background-color:#000000 ;
+	color:#EFE9D1;
+}
+.chkoutuserinfo {
+/*	   position:absolute;
+	left:110px;
+	top:7px; 
+	float:right;
+	clear:left;
+*/
+	background-color: White;
+	padding: 5px 5px 5px 5px;
+	margin:10,10,10,10;
+	border:2px;
+	border-color:black;
+	color:black;
+	width:40%;
+	height:auto;
+}
+
+.userinfo {
+    position:absolute;
+	right:20px;
+	background-color: LightSteelBlue;
+	top:5px; 
+	height: 100px;
+    margin: 0px 0px 0px 0px;
+	text-align: left;
+	width: 240px;
+	height:110px;
+	border: medium solid blue;
+	color:black;
+	font-size: large;
+}
+
+.userphoto img {
+  position:absolute;
+	left:0px;
+	top:5px; 
+/*	padding: 5px;
+ 	float:left;
+	clear:right;
+*/
+	border:2px;
+	border-color:#000000;
+	width:80px;
+	height:80px;
+
+}
+.userdata  {
+	   position:absolute;
+	left:110px;
+	top:7px; 
+	background-color: SteelBlue;
+	padding: 0px 0px 0px 5px;
+/*	float:right;
+	clear:left;
+*/
+	border:2px;
+	border-color:#000000;
+	width:120px;
+	height:80px;
+
+}
+
+.existphoto  td {
+	border: medium solid black;
+	height:80px;
+	width:80px;
+/*	clear:left;
+*/
+}
+.existphoto img {
+	float:left;
+	width:90%;
+    padding: 2px 3px 2px 2px ;
+	border: medium solid green;
+/*	height:110px;
+	clear:left;
+*/
+}
+
+.dispprodphoto {
+/*    position:relative;
+	clear:right;
+    padding: 5px 5px 5px 5px ;
+	*/
+	float: left;
+    padding: 1% 1%;
+    margin-top: 10px;
+    margin-left: 10px;
+	background-color: LightSteelBlue;
+	height: auto;
+	max-height:300px;
+	width: 28%;
+	max-width:28%;
+	border: medium solid black;
+	color:black;
+	font-size: medium;
+	overflow:auto;
+}
+.dispprodphoto img {
+	float:left;
+	width:40%;
+	height:90%;
+	max-width:40%;
+/*	margin:1%;
+
+	clear:right;
+	max-height:90%;
+	margin-left: auto;
+	margin-right:auto;
+*/}
+
+.dispprodphoto p {
+	width:40%;
+	height:90%;
+	float:right;
+	max-width:40%;
+/*
+	max-height:90%;
+   padding: 5px 5px 5px 5px ;
+	clear:left;
+	margin-left: auto;
+	margin-right:auto;
+*/
+}
+
+.prodphoto {
+/*    position:relative;
+	right:20px;
+	top:10px; 
+	margin-right:10px;
+background-image: url("/images/rmxhlogo.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-align: left;
+*/
+	float: left;
+	clear:right;
+	background-color: LightSteelBlue;
+	height: 250px;
+    margin: 0px 10px 10px 10px;
+	width: 30%;
+	border: medium solid blue;
+    padding: 5px 5px 5px 5px ;
+	color:black;
+	font-size: medium;
+}
+.prodphoto img {
+	float:left;
+	width:30%;
+    padding: 2px 3px 2px 2px ;
+	border: medium solid green;
+/*	height:110px;
+	clear:left;
+*/
+}
+
+.prodphoto textarea {
+    width: 50%;
+    height: 100px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: MediumAquaMarine;
+    resize: none;
+	float:right;
+	clear:left;
+}
+
+.prodtable {
+/*	width:90%;*/
+    box-sizing: border-box;
+    border: 2px solid darkgrey;
+    border-radius: 4px;
+    background-color: darkgrey;/*
+                           MediumAquaMarine; 
+                                */
+ }
+.prodtable td  {
+	text-align:left;
+	width:30%;
+}
+.prodtable th  {
+	text-align:left;
+}
+
+.productbox {
+/*    position:relative;
+ * 
+ */
+	float: left;
+	background-color: LightSteelBlue;
+	height: 300px;
+ 	width: 95%;
+    margin: 10px 10px 10px 10px;
+	border: medium solid blue;
+	color:black;
+	font-size: large;
+}
+.productbox a:link{
+    text-decoration: none;
+}
+
+.productboximg {
+	/*
+	 * 
+	 */
+	float:left;
+	clear:left;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:120px;
+	height:120px;
+    padding: 5% 5% 5% 5% ;
+}
+
+.productbox textarea {
+    width: auto;
+    height: 100px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: MediumAquaMarine;
+    resize: none;
+	float:right;
+	clear:left;
+}
+
+.displayprodmainphoto {
+    position:relative;
+/*	
+	float: left;
+	clear:right;
+*/
+	height: auto;
+	width: 100%;
+    margin: 5px 15px 10px 10px;
+	color:black;
+	font-size: large;
+}
+
+.displayprodmainphoto img {
+	float:left;
+	clear:right;
+	width:45%;
+/*	height:90%;
+*/
+	max-width:300px;
+	max-height:300px;
+    padding: 5px 5px 5px 5px ;
+/*	margin-left: auto;
+	margin-right:auto;
+*/}
+
+.mainproddata {
+    position:relative;
+/*	clear:right;
+		*/
+	float:left ;
+	background-color: LightSteelBlue;
+	height: 90%;
+    margin: 5px 5px 5px 5px;
+	width: 45%;
+	border: medium solid blue;
+    padding: 5px 5px 5px 5px ;
+	color:black;
+	font-size: large;
+}
+.mainproddata textarea {
+    width: 60%;
+    height: 50%;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: MediumAquaMarine;
+    resize: none;
+	float:left;
+}
+
+.mainprodphoto {
+/* 	clear:right;
+	clear:left;
+ * 
+ */
+	position:relative;
+	float: right;
+	background-color: LightSteelBlue;
+	height: 90%;
+    margin: 5px 5px 5px 5px;
+	width: 45%;
+	border: medium solid blue;
+    padding: 5px 5px 5px 5px ;
+	color:black;
+	font-size: large;
+}
+.mainprodphoto img {
+	float:left;
+	clear:left;
+	width:30%;
+/*	height:100px; */
+    margin: 5px 5px 5px 5px;
+}
+
+.mainprodphoto textarea {
+    width: 60%;
+    height: 60%;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: MediumAquaMarine;
+    resize: none;
+	float:left;
+	clear:right;
+}
+
+/* Form Styles */
+
+input[type=text],input[type=email] {
+/*    width: 100%; */
+    padding: 2px 2px;
+    margin: 8px 8px;
+    box-sizing: border-box;
+   	border: 2px solid red;
+    border-radius: 4px;
+	background-color: MediumAquaMarine;
+    color: black;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+textarea {
+    width: auto;
+    height: 100px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: MediumAquaMarine;
+    resize: none;
+    margin: 5px 5px 5px 5px;
+/*	float:left;
+	clear:right;
+*/}
+ /* Menu stuff from http://inspirationalpixels.com/tutorials/creating-a-dropdown-menu-with-html-css#html  */
+
+.clearfix:after {
+    display:block;
+    clear:both;
+}
+ 
+/*----- Menu Outline -----*/
+.menu-wrap {
+	position:absolute;
+	top: 115px;
+	right:20px;
+	height:25px;
+	width:95%;
+	text-align: right;
+	background-color: DarkGrey;
+   padding: 0px 5px 5px 2px;
+/*     box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background:#3e3436;
+*/
+}
+ 
+.menu {
+    width:90%;
+    margin:0px auto;
+}
+ 
+.menu li {
+    margin:0px;
+    list-style:none;
+    font-family:'Ek Mukta';
+}
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color:black;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:#be5b70;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:13px;
+}
+ 
+.menu > ul > li > a {
+    padding:0px 10px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
+}
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:160%;
+    padding:0px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:lightgray;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:13px;
+}
+ 
+.sub-menu li a {
+    padding:1px 30px;
+    display:block;
+}
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#CCCCCC;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+/*.sidebar1 {
+	float: left;
+	width: 100px;
+	background: 0;
+	padding-bottom: 10px;
+	border: 3px solid blue;
+	word-wrap: normal;
+	height: auto;
+}
+
+ ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: 0;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+	border: thin groove #099;
+	height: 60px;
+	text-align: left;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+a:hover {
+	color: #393;
+}
+a:active {
+	color: #399;
+}
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 22px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 12px;
+}
+h6 {
+	font-size: 10px;
+}
